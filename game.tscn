@@ -1,0 +1,314 @@
+[gd_scene load_steps=59 format=2]
+
+[ext_resource path="res://Objects/Bush (1).png" type="Texture" id=1]
+[ext_resource path="res://Objects/Crate.png" type="Texture" id=2]
+[ext_resource path="res://Ninja/Jump__008.png" type="Texture" id=3]
+[ext_resource path="res://World/Ground.png" type="Texture" id=4]
+[ext_resource path="res://Ninja/Jump__005.png" type="Texture" id=5]
+[ext_resource path="res://Ninja/Idle__004.png" type="Texture" id=6]
+[ext_resource path="res://Ninja/Jump__006.png" type="Texture" id=7]
+[ext_resource path="res://Ninja/Jump__003.png" type="Texture" id=8]
+[ext_resource path="res://Ninja/Idle__007.png" type="Texture" id=9]
+[ext_resource path="res://Ninja/Idle__008.png" type="Texture" id=10]
+[ext_resource path="res://Objects/Stone.png" type="Texture" id=11]
+[ext_resource path="res://Ninja/Jump__000.png" type="Texture" id=12]
+[ext_resource path="res://Objects/SignArrow.png" type="Texture" id=13]
+[ext_resource path="res://Ninja/Jump__001.png" type="Texture" id=14]
+[ext_resource path="res://Objects/Cactus (3).png" type="Texture" id=15]
+[ext_resource path="res://Ninja/Idle__006.png" type="Texture" id=16]
+[ext_resource path="res://Objects/Tree.png" type="Texture" id=17]
+[ext_resource path="res://Ninja/Idle__001.png" type="Texture" id=18]
+[ext_resource path="res://Ninja/Idle__009.png" type="Texture" id=19]
+[ext_resource path="res://Ninja/Jump__007.png" type="Texture" id=20]
+[ext_resource path="res://Ninja/Jump__002.png" type="Texture" id=21]
+[ext_resource path="res://Ninja/Idle__003.png" type="Texture" id=22]
+[ext_resource path="res://Ninja/Idle__005.png" type="Texture" id=23]
+[ext_resource path="res://World/BackGround.png" type="Texture" id=24]
+[ext_resource path="res://Objects/Cactus (1).png" type="Texture" id=25]
+[ext_resource path="res://Ninja/Idle__002.png" type="Texture" id=26]
+[ext_resource path="res://Objects/Skeleton.png" type="Texture" id=27]
+[ext_resource path="res://Ninja/Jump__004.png" type="Texture" id=28]
+[ext_resource path="res://Ninja/Jump__009.png" type="Texture" id=29]
+[ext_resource path="res://Ninja/Idle__000.png" type="Texture" id=30]
+[ext_resource path="res://JOKERMAN.TTF" type="DynamicFontData" id=31]
+[ext_resource path="res://player.gd" type="Script" id=32]
+[ext_resource path="res://BackGround.gd" type="Script" id=33]
+[ext_resource path="res://Ninja/Run__003.png" type="Texture" id=34]
+[ext_resource path="res://Ninja/Run__005.png" type="Texture" id=35]
+[ext_resource path="res://Ninja/Run__007.png" type="Texture" id=36]
+[ext_resource path="res://Ninja/Run__006.png" type="Texture" id=37]
+[ext_resource path="res://Ninja/Run__009.png" type="Texture" id=38]
+[ext_resource path="res://Ninja/Run__004.png" type="Texture" id=39]
+[ext_resource path="res://Ninja/Run__008.png" type="Texture" id=40]
+[ext_resource path="res://Ninja/Dead__001.png" type="Texture" id=41]
+[ext_resource path="res://Ninja/Dead__003.png" type="Texture" id=42]
+[ext_resource path="res://Ninja/Run__002.png" type="Texture" id=43]
+[ext_resource path="res://Ninja/Dead__007.png" type="Texture" id=44]
+[ext_resource path="res://Ninja/Run__000.png" type="Texture" id=45]
+[ext_resource path="res://Ninja/Dead__000.png" type="Texture" id=46]
+[ext_resource path="res://Ninja/Dead__005.png" type="Texture" id=47]
+[ext_resource path="res://Ninja/Dead__002.png" type="Texture" id=48]
+[ext_resource path="res://Ninja/Dead__006.png" type="Texture" id=49]
+[ext_resource path="res://Ninja/Dead__004.png" type="Texture" id=50]
+[ext_resource path="res://Ninja/Dead__008.png" type="Texture" id=51]
+[ext_resource path="res://Ninja/Dead__009.png" type="Texture" id=52]
+[ext_resource path="res://Ninja/Run__001.png" type="Texture" id=53]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 12.8254, 14.8399 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 50.2117, 51.5656 )
+
+[sub_resource type="DynamicFont" id=3]
+size = 63
+font_data = ExtResource( 31 )
+
+[sub_resource type="SpriteFrames" id=4]
+animations = [ {
+"frames": [ ExtResource( 30 ), ExtResource( 18 ), ExtResource( 26 ), ExtResource( 22 ), ExtResource( 6 ), ExtResource( 23 ), ExtResource( 16 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 19 ) ],
+"loop": true,
+"name": "Idle",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 46 ), ExtResource( 41 ), ExtResource( 48 ), ExtResource( 42 ), ExtResource( 50 ), ExtResource( 47 ), ExtResource( 49 ), ExtResource( 44 ), ExtResource( 51 ), ExtResource( 52 ) ],
+"loop": true,
+"name": "Dead",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 12 ), ExtResource( 14 ), ExtResource( 21 ), ExtResource( 8 ), ExtResource( 28 ), ExtResource( 5 ), ExtResource( 7 ), ExtResource( 20 ), ExtResource( 3 ), ExtResource( 29 ) ],
+"loop": true,
+"name": "Jump",
+"speed": 30.0
+}, {
+"frames": [ ExtResource( 45 ), ExtResource( 53 ), ExtResource( 43 ), ExtResource( 34 ), ExtResource( 39 ), ExtResource( 35 ), ExtResource( 37 ), ExtResource( 36 ), ExtResource( 40 ), ExtResource( 38 ) ],
+"loop": true,
+"name": "Run",
+"speed": 30.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=5]
+radius = 29.1152
+height = 62.9005
+
+[node name="game" type="Node2D"]
+
+[node name="world" type="Node2D" parent="."]
+script = ExtResource( 33 )
+
+[node name="BackGround2" type="Sprite" parent="world"]
+position = Vector2( 2336.5, -102.33 )
+texture = ExtResource( 24 )
+offset = Vector2( 734.535, 194.724 )
+
+[node name="BackGround" type="Sprite" parent="world"]
+position = Vector2( 294.603, -104.033 )
+texture = ExtResource( 24 )
+offset = Vector2( 734.535, 194.724 )
+
+[node name="GROUND" type="Node2D" parent="world"]
+
+[node name="Ground2" type="Sprite" parent="world/GROUND"]
+position = Vector2( 3083.69, 342.281 )
+scale = Vector2( 1.01626, 1 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="world/GROUND/Ground2" groups=[
+"Ground",
+]]
+position = Vector2( -2020.99, 28.1736 )
+scale = Vector2( 0.984001, 1 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/GROUND/Ground2/StaticBody2D2"]
+position = Vector2( 2063.2, 158.696 )
+scale = Vector2( 80.9653, -9.80871 )
+shape = SubResource( 1 )
+
+[node name="Ground" type="Sprite" parent="world/GROUND"]
+position = Vector2( 1030.69, 346.61 )
+texture = ExtResource( 4 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/GROUND/Ground" groups=[
+"Ground",
+]]
+position = Vector2( 4.91455, 176.441 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/GROUND/Ground/StaticBody2D"]
+position = Vector2( -14.6301, 6.37158 )
+scale = Vector2( 80.9653, -9.80871 )
+shape = SubResource( 1 )
+
+[node name="objects" type="Node2D" parent="world"]
+position = Vector2( 81.7729, 0 )
+
+[node name="Bush (1)" type="Sprite" parent="world/objects"]
+position = Vector2( 420.047, 307.387 )
+texture = ExtResource( 1 )
+
+[node name="Bush (1)2" type="Sprite" parent="world/objects"]
+position = Vector2( 2730.89, 314.998 )
+texture = ExtResource( 1 )
+
+[node name="Bush (1)3" type="Sprite" parent="world/objects"]
+position = Vector2( 1554.83, 319.075 )
+texture = ExtResource( 1 )
+
+[node name="Tree" type="Sprite" parent="world/objects"]
+position = Vector2( 3755.39, 229.332 )
+texture = ExtResource( 17 )
+
+[node name="Tree3" type="Sprite" parent="world/objects"]
+position = Vector2( 1024.33, 222.205 )
+texture = ExtResource( 17 )
+
+[node name="Tree2" type="Sprite" parent="world/objects"]
+position = Vector2( 1995.21, 218.9 )
+texture = ExtResource( 17 )
+
+[node name="SignArrow" type="Sprite" parent="world/objects"]
+position = Vector2( 162.888, 310.562 )
+texture = ExtResource( 13 )
+
+[node name="obestecals" type="Node2D" parent="world/objects"]
+
+[node name="Cactus (1)" type="Sprite" parent="world/objects/obestecals"]
+position = Vector2( 869.411, 349.934 )
+scale = Vector2( 1.19747, 1.18202 )
+texture = ExtResource( 25 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/objects/obestecals/Cactus (1)" groups=[
+"Obs",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world/objects/obestecals/Cactus (1)/StaticBody2D"]
+polygon = PoolVector2Array( -35.1218, -41.1831, -49.7137, -35.5708, -48.5912, -15.3665, -35.1218, 2.59296, -19.4073, 5.96033, -18.2848, 54.2262, 16.5115, 55.3486, 18.7565, 29.532, 40.0832, 20.5523, 52.4303, -4.14185, 45.6956, -24.3461, 33.3484, -25.4686, 23.2463, -20.9788, 25.4912, -6.38678, 18.7565, 13.8176, 18.7565, -29.9585, 12.0217, -49.0403, -1.44788, -56.8976, -17.1624, -47.9178, -21.6522, -34.4483, -20.5297, -9.75415, -23.8971, -4.14185 )
+
+[node name="Cactus (3)" type="Sprite" parent="world/objects/obestecals"]
+position = Vector2( 1369.04, 395.757 )
+scale = Vector2( 1.15662, 1.12862 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/objects/obestecals/Cactus (3)" groups=[
+"Obs",
+]]
+position = Vector2( -1.07825, 13.2152 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world/objects/obestecals/Cactus (3)/StaticBody2D"]
+position = Vector2( -650.168, -24.8091 )
+polygon = PoolVector2Array( 636.111, -15.3665, 624.886, -14.244, 623.763, -5.26428, 614.784, 7.08276, 615.906, 13.8176, 622.641, 26.1646, 628.253, 41.8791, 628.253, 53.1037, 679.887, 55.3486, 682.132, 31.7769, 692.234, 14.94, 692.234, 3.71539, 694.479, -7.50922, 697.846, -33.3259, 685.499, -42.3055, 670.907, -31.0809, 666.417, -17.6114, 666.417, -6.38678, 655.192, 4.83783, 657.437, 16.0625, 643.968, 16.0625, 638.356, -1.89691 )
+
+[node name="Cactus (3)2" type="Sprite" parent="world/objects/obestecals"]
+position = Vector2( 3408.25, 385.238 )
+scale = Vector2( 1.15662, 1.12862 )
+texture = ExtResource( 15 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/objects/obestecals/Cactus (3)2" groups=[
+"Obs",
+]]
+position = Vector2( -658.163, -8.0498 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world/objects/obestecals/Cactus (3)2/StaticBody2D"]
+polygon = PoolVector2Array( 636.111, -15.3665, 624.886, -14.244, 623.763, -5.26428, 614.784, 7.08276, 615.906, 13.8176, 622.641, 26.1646, 628.253, 41.8791, 628.253, 53.1037, 679.887, 55.3486, 682.132, 31.7769, 692.234, 14.94, 692.234, 3.71539, 694.479, -7.50922, 697.846, -33.3259, 685.499, -42.3055, 670.907, -31.0809, 666.417, -17.6114, 666.417, -6.38678, 655.192, 4.83783, 657.437, 16.0625, 643.968, 16.0625, 638.356, -1.89691 )
+
+[node name="Skeleton" type="Sprite" parent="world/objects/obestecals"]
+position = Vector2( 1862.56, 397.9 )
+texture = ExtResource( 27 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/objects/obestecals/Skeleton" groups=[
+"Obs",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world/objects/obestecals/Skeleton/StaticBody2D"]
+polygon = PoolVector2Array( -27.1416, -24.6387, -41.7335, -21.8325, -49.0295, -13.9753, -48.4683, -1.06696, -66.9889, 5.10657, -74.2849, 20.2598, -71.4788, 24.1884, -40.6111, 19.6986, -21.5293, 23.6272, 11.5835, 22.5047, 72.7576, 23.066, 75.0024, 15.2087, 73.3188, 7.3515, 54.2371, -3.87314, 18.3181, -19.5876, 19.4407, -12.2916, 8.77734, -17.3427, -0.763672, -13.9753, -19.8455, -15.0977, -33.8762, -13.9753, -37.2437, -13.9753 )
+
+[node name="Stone" type="Sprite" parent="world/objects/obestecals"]
+position = Vector2( 2379.55, 379.397 )
+texture = ExtResource( 11 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/objects/obestecals/Stone" groups=[
+"Obs",
+]]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="world/objects/obestecals/Stone/StaticBody2D"]
+polygon = PoolVector2Array( -15.9727, -33.3105, -23.9097, -22.1987, -31.053, -15.0554, -46.1333, -2.35623, -57.2451, 15.1052, -61.2136, 31.7729, -62.0073, 36.5351, 61.0164, 36.5351, 59.429, 18.28, 51.4919, -3.94363, 40.3801, -21.405, 26.0935, -27.7546, 14.9817, -26.1672, 5.45728, -34.8979, -4.86084, -36.4854 )
+
+[node name="Crate" type="Sprite" parent="world/objects/obestecals"]
+position = Vector2( 2855.83, 380.03 )
+texture = ExtResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="world/objects/obestecals/Crate" groups=[
+"Obs",
+]]
+position = Vector2( 0, -1.41425 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="world/objects/obestecals/Crate/StaticBody2D"]
+position = Vector2( -0.830566, 0 )
+shape = SubResource( 2 )
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2( 522.753, 292.319 )
+current = true
+
+[node name="Control" type="Control" parent="Camera2D"]
+margin_right = 40.0
+margin_bottom = 40.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="jump" type="Button" parent="Camera2D/Control"]
+anchor_left = 8.165
+anchor_top = 4.767
+anchor_right = 8.165
+anchor_bottom = 4.767
+margin_left = -2.68912
+margin_top = -18.7052
+margin_right = 176.311
+margin_bottom = 83.2948
+custom_fonts/font = SubResource( 3 )
+text = "Jump"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restart" type="Button" parent="Camera2D/Control"]
+pause_mode = 2
+anchor_left = 8.165
+anchor_top = 4.767
+anchor_right = 8.165
+anchor_bottom = 4.767
+margin_left = -818.689
+margin_top = -16.7052
+margin_right = -578.689
+margin_bottom = 85.2948
+custom_fonts/font = SubResource( 3 )
+text = "Restart"
+flat = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="player" type="RigidBody2D" parent="."]
+position = Vector2( 284.805, 347.544 )
+mode = 2
+mass = 0.612245
+gravity_scale = 9.8
+contacts_reported = 1
+contact_monitor = true
+script = ExtResource( 32 )
+
+[node name="player_animation" type="AnimatedSprite" parent="player"]
+position = Vector2( -13.1447, 10.9362 )
+scale = Vector2( 0.351626, 0.432708 )
+frames = SubResource( 4 )
+animation = "Run"
+frame = 3
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="player"]
+position = Vector2( -3.91429, -3.35394 )
+scale = Vector2( 1.72, 1.68 )
+shape = SubResource( 5 )
+[connection signal="pressed" from="Camera2D/Control/jump" to="player" method="_on_jump_pressed"]
+[connection signal="pressed" from="Camera2D/Control/restart" to="world" method="_on_restart_pressed"]
+[connection signal="body_entered" from="player" to="player" method="_on_player_body_entered"]
